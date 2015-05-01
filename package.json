@@ -1,7 +1,7 @@
 {
   "name": "assistant-frontend",
   "version": "0.0.0",
-  "description": "Small description for assistant-frontend goes here",
+  "description": "an ember client for the artisan assistant-API",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -12,12 +12,21 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:artisan-tattoo/assistant-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/artisan-tattoo/assistant-frontend/issues"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
-  "license": "MIT",
+  "author": "ashley williams",
+  "license": {
+      "name": "GNU Affero GPL v3.0",
+      "url": "https://github.com/artisan-tattoo/assistant-frontend/blob/master/LICENSE"
+  },
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
     "ember-cli": "0.2.3",
