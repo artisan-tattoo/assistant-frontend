@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>New Customer</h2>
+    <form action="/customers" method="post">
+      <div class="form-group">
+        <label for="nameInput">Name:</label>
+        <input class="form-control" type="text" name="name" id="nameInput"/>
+      </div>
+      <div class="form-group">
+        <label for="emailInput">Email:</label>
+        <input class="form-control" type="text" name="email" id="emailInput"/>
+      </div>
+      <div class="form-group">
+        <label for="phoneInput" describedby="phoneHelp">Phone Number:</label>
+        <span id="phoneHelp" class="help-block">e.g. 888-888-8888</span>
+        <input class="form-control" type="text" name="phone" id="phoneInput"/>
+      </div>
+      <div class="form-group clearfix">
+        <div class="pull-left">
+          <label for="localInput"> Local? </label>
+          <input class="checkbox" type="checkbox" name="local" id="localInput"/>
+        </div>
+        <div class="col-sm-10 pull-right">
+          <label for="locationInput">Location:</label>
+          <input class="form-control" type="text" name="location" id="locationInput"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="waitInput">Date on Wait List:</label>
+        <input class="form-control" type="text" name="date-on-wait-list" id="waitInput"/>
+      </div>
+      <div class="form-group">
+        <label for="statusInput">Status:</label>
+        <select id="statusInput" class="form-control">
+          <option value="1" selected="selected">Ongoing</option>
+          <option value="2">Waiting List</option>
+          <option value="3">Finished</option>
+          <option value="4">On Hold</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="creditInput">Credit:</label>
+        <input class="form-control" type="text" name="credit" id="creditInput"/>
+      </div>
+      <div class="form-group">
+        <label for="wantInput">Want:</label>
+        <textarea class="form-control" rows="3" name="want" id="wantInput"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="notesInput">Notes:</label>
+        <textarea class="form-control" rows="3" name="notes" id="notesInput"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Login</button>
+    </form>
+  </div>
+</div>
