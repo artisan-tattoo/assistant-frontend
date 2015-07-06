@@ -1,7 +1,26 @@
 <h2>Customers</h2>
 
-<ul>
-  {{#each model as |customer|}}
-    <li>{{customer.email}}</li>
-  {{/each}}
-</ul>
+<div class="container">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Want</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |customer|}}
+        <tr>
+          <td>{{customer.id}}</td>
+          <td>{{customer.name}}</td>
+          <td>{{customer.phone}}</td>
+          <td>{{customer.want}}</td>
+          <td>{{customer.notes}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
