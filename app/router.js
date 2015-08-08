@@ -9,7 +9,8 @@ Router.map(function() {
   this.resource('customers', function() {
     this.route('new');
   });
-  this.route('login', { path: '/login' });
+  this.route('login');
+  this.route('protected');
 });
 
 export default Router;
