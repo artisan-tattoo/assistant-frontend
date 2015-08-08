@@ -21,7 +21,7 @@ export default Base.extend({
       url: self.tokenEndpoint, 
       type: 'POST', 
       data: JSON.stringify({
-          username: options.identification,
+          email: options.identification,
           password: options.password
       }),
       contentType: 'application/json;charset=utf-8',
