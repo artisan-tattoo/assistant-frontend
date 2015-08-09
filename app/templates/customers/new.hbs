@@ -31,9 +31,9 @@
       </div>
       <div class="form-group">
         <label for="statusInput">Status:</label>
-        <select name={{model.status}} id="statusInput" onChange={{action (mut value) value="target.value"}}>
+        <select name={{model.status}} id="statusInput" onChange={{action (mut model.status) value="target.value"}}>
           {{#each statuses as |status|}}
-            <option value={{status.value}} selected={{is-equal value status.value}}>
+            <option value={{status.value}} selected={{is-equal model.status status.value}}>
               {{status.name}}
             </option>
           {{/each}}
