@@ -17,13 +17,13 @@
     </thead>
     <tbody>
       {{#each model as |customer|}}
-        <tr>
+        {{#link-to 'customer' customer tagName="tr"}}
           <td>{{customer.id}}</td>
           <td>{{customer.name}}</td>
           <td>{{customer.phone}}</td>
           <td>{{customer.want}}</td>
           <td>{{customer.notes}}</td>
-        </tr>
+        {{/link-to}}
       {{/each}}
     </tbody>
   </table>
