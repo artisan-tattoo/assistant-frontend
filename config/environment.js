@@ -41,6 +41,8 @@ module.exports = function(environment) {
     ENV['contentSecurityPolicy']['connect-src'] = "'self' http://localhost:8080/";
 
     ENV['simple-auth']['crossOriginWhitelist'] = ['http://localhost:8080'];
+
+    ENV.APP.API_HOST = "http://localhost:8080";
   }
 
   if (environment === 'test') {
@@ -59,6 +61,8 @@ module.exports = function(environment) {
     ENV['contentSecurityPolicy']['connect-src'] = "'self' http://api.artisanassistant.com/";
 
     ENV['simple-auth']['crossOriginWhitelist'] = ['http://api.artisanassistant.com/'];
+
+    ENV.APP.API_HOST = "http://api.artisanassistant.com";
   }
 
   return ENV;
