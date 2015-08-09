@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>
+    <small>{{model.id}}</small>
+    {{model.name}}
+  </h2>
+  <div class="row">
+    <div class="col-md-6">
+      <dl>
+        <dt>Phone Number:</dt>
+        <dd>{{model.phone}}</dd>
+        <dt>Email:</dt>
+        <dd>{{model.email}}</dd>
+        <dt>Local?</dt>
+        <dd>{{model.local}}</dd>
+        <dt>Location</dt>
+        <dd>{{model.location}}</dd>
+      </dl>
+    </div>
+    <div class="col-md-6">
+      <dl>
+        <dt>Artist ID:</dt>
+        <dd>{{artist_id}}</dd>
+        <dt>Status:</dt>
+        <dd>{{model.status}}</dd>
+        <dt>Date on Waiting List:</dt>
+        <dd>{{model.date_on_waiting_list}}</dd>
+        <dt>Credit:</dt>
+        <dd>{{model.credit}}</dd>
+      </dl>
+    </div>
+    <div class="col-md-12">
+      <dl>
+        <dt>Want:</dt>
+        <dd>{{model.want}}</dd>
+        <dt>Notes:</dt>
+        <dd>{{model.notes}}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
