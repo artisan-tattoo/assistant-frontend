@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="clearfix">
+    <h2 class="pull-left">
+      <small>{{model.id}}</small>
+      {{model.name}}
+    </h2>
+    <div class="pull-right">
+      {{#link-to 'customer.edit' model tagName="button" class="btn btn-warning"}}Edit{{/link-to}}
+      <button class="btn btn-danger" {{action 'delete'}}>
+        Delete
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <dl>
+        <dt>Phone Number:</dt>
+        <dd>{{model.phone}}</dd>
+        <dt>Email:</dt>
+        <dd>{{model.email}}</dd>
+        <dt>Local?</dt>
+        <dd>{{model.local}}</dd>
+        <dt>Location</dt>
+        <dd>{{model.location}}</dd>
+      </dl>
+    </div>
+    <div class="col-md-6">
+      <dl>
+        <dt>Artist ID:</dt>
+        <dd>{{model.artistId}}</dd>
+        <dt>Status:</dt>
+        <dd>{{model.status}}</dd>
+        <dt>Date on Waiting List:</dt>
+        <dd>{{model.date-on-waiting-list}}</dd>
+        <dt>Credit:</dt>
+        <dd>{{model.credit}}</dd>
+      </dl>
+    </div>
+    <div class="col-md-12">
+      <dl>
+        <dt>Want:</dt>
+        <dd>{{model.want}}</dd>
+        <dt>Notes:</dt>
+        <dd>{{model.notes}}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

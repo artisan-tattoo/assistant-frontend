@@ -6,9 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('customers', function() {
+  this.route('customers', { path: 'customers' }, function() {
     this.route('new');
-    this.resource('customer', { path: ':customer_id' });
+  });
+  this.route('customer', { path: 'customers/:customer_id' }, function() {
+    this.route('edit');
   });
   this.route('login');
 });
