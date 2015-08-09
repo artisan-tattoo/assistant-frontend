@@ -4,30 +4,30 @@
     <form action="/customers" method="post">
       <div class="form-group">
         <label for="nameInput">Name:</label>
-        <input class="form-control" type="text" name="name" id="nameInput"/>
+        {{input value=model.name class="form-control" }}
       </div>
       <div class="form-group">
         <label for="emailInput">Email:</label>
-        <input class="form-control" type="text" name="email" id="emailInput"/>
+        {{input value=model.email class="form-control" }}
       </div>
       <div class="form-group">
         <label for="phoneInput" describedby="phoneHelp">Phone Number:</label>
         <span id="phoneHelp" class="help-block">e.g. 888-888-8888</span>
-        <input class="form-control" type="text" name="phone" id="phoneInput"/>
+        {{input value=model.phone class="form-control" }}
       </div>
       <div class="form-group clearfix">
         <div class="pull-left">
           <label for="localInput"> Local? </label>
-          <input class="checkbox" type="checkbox" name="local" id="localInput"/>
+          {{input checked=model.local class="form-control" type="checkbox" }}
         </div>
         <div class="col-sm-10 pull-right">
           <label for="locationInput">Location:</label>
-          <input class="form-control" type="text" name="location" id="locationInput"/>
+          {{input value=model.location class="form-control" }}
         </div>
       </div>
       <div class="form-group">
         <label for="waitInput">Date on Wait List:</label>
-        <input class="form-control" type="text" name="date-on-wait-list" id="waitInput"/>
+        {{input value=model.dateonwaitinglist class="form-control" }}
       </div>
       <div class="form-group">
         <label for="statusInput">Status:</label>
@@ -40,17 +40,17 @@
       </div>
       <div class="form-group">
         <label for="creditInput">Credit:</label>
-        <input class="form-control" type="text" name="credit" id="creditInput"/>
+        {{input value=model.credit class="form-control" }}
       </div>
       <div class="form-group">
         <label for="wantInput">Want:</label>
-        <textarea class="form-control" rows="3" name="want" id="wantInput"></textarea>
+        {{input value=model.want class="form-control" }}
       </div>
       <div class="form-group">
         <label for="notesInput">Notes:</label>
-        <textarea class="form-control" rows="3" name="notes" id="notesInput"></textarea>
+        {{textarea value=model.notes class="form-control" rows="3"}}
       </div>
-      <button class="btn btn-primary" type="submit">Create</button>
+      <button class="btn btn-primary" {{action 'createCustomer'}}>Create</button>
     </form>
   </div>
 </div>
