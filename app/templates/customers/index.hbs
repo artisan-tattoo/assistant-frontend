@@ -13,17 +13,22 @@
         <th>Phone</th>
         <th>Want</th>
         <th>Notes</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
       {{#each model as |customer|}}
-        {{#link-to 'customer' customer tagName="tr"}}
+        <tr>
           <td>{{customer.id}}</td>
           <td>{{customer.name}}</td>
           <td>{{customer.phone}}</td>
           <td>{{customer.want}}</td>
           <td>{{customer.notes}}</td>
-        {{/link-to}}
+          <td>
+            {{#link-to 'customer' customer tagName="button" class="btn btn-success"}}Show{{/link-to}}
+            {{#link-to 'customer.edit' customer tagName="button" class="btn btn-warning"}}Edit{{/link-to}}
+          </td>
+        </tr>
       {{/each}}
     </tbody>
   </table>
