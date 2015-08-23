@@ -29,6 +29,6 @@ export default DS.Model.extend({
 
   formattedDateOnWaitingList: Ember.computed('dateOnWaitingList', function() {
     var date = this.get('dateOnWaitingList');
-    return date.getMonth() + "/" + date.getDay() + "/" + date.getFullYear();
+    return (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
   })
 });
