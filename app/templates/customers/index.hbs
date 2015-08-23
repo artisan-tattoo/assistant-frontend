@@ -30,10 +30,28 @@
                       sortAscending = sortAscending
                       action='sort'}}
         <th>Phone</th>
+        <th>Actions</th>
       </tr>
     </thead>
+    <h3>Sorted</h3>
     <tbody>
       {{#each sortedCustomers as |customer|}}
+        <tr>
+          <td>{{customer.id}}</td>
+          <td>{{customer.name}}</td>
+          <td>{{customer.statusText}}</td>
+          <td>{{customer.formattedDateOnWaitingList}}</td>
+          <td>{{customer.phone}}</td>
+          <td>
+            {{#link-to 'customer' customer tagName="button" class="btn btn-success"}}Show{{/link-to}}
+            {{#link-to 'customer.edit' customer tagName="button" class="btn btn-warning"}}Edit{{/link-to}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+    <h3>Filtered</h3>
+    <tbody>
+      {{#each filteredCustomers as |customer|}}
         <tr>
           <td>{{customer.id}}</td>
           <td>{{customer.name}}</td>

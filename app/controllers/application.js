@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   actions: {
     query: function() {
       var query = this.get('search');
-      this.transitionToRoute('search', { query: query });
+      this.transitionToRoute('customers', { queryParams: { name:query } });
     }
   }
 });
