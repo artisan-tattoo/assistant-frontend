@@ -37,8 +37,8 @@
         <tr>
           <td>{{customer.id}}</td>
           <td>{{customer.name}}</td>
-          <td>{{customer.status}}</td>
-          <td>{{customer.dateOnWaitingList}}</td>
+          <td>{{customer.statusText}}</td>
+          <td>{{customer.formattedDateOnWaitingList}}</td>
           <td>{{customer.phone}}</td>
           <td>
             {{#link-to 'customer' customer tagName="button" class="btn btn-success"}}Show{{/link-to}}
