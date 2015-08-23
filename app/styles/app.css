@@ -8,3 +8,16 @@
 .grey-box {
   margin-top: 50px;
 }
+
+th a:after {
+  content: " \25B4\25BE";
+}
+
+.asc a:after {
+  content: " \25B4";
+}
+
+.desc a:after {
+  content: " \25BE";
+}
+
