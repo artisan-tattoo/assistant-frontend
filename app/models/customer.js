@@ -19,7 +19,7 @@ export default DS.Model.extend({
       case 1:
         return "Ongoing";
       case 2:
-        return "On Waiting List";
+        return "Waiting";
       case 3:
         return "Finished";
       case 4:
