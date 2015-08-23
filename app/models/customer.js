@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
@@ -23,7 +24,7 @@ export default DS.Model.extend({
         return "Finished";
       case 4:
         return "On Hold";
-    };
+    }
   }),
 
   formattedDateOnWaitingList: Ember.computed('dateOnWaitingList', function() {
