@@ -12,4 +12,22 @@ export default DS.Model.extend({
   credit: DS.attr('string'),
   want: DS.attr('string'),
   notes: DS.attr('string'),
+
+  statusText: Ember.computed('status', function() {
+    switch (this.get('status')) {
+      case 1:
+        return "Ongoing";
+      case 2:
+        return "On Waiting List";
+      case 3:
+        return "Finished";
+      case 4:
+        return "On Hold";
+    };
+  }),
+
+  formattedDateOnWaitingList: Ember.computed('dateOnWaitingList', function() {
+    var date = this.get('dateOnWaitingList');
+    return date.getMonth() + "/" + date.getDay() + "/" + date.getFullYear();
+  })
 });

@@ -26,17 +26,17 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="waitInput">Date on Wait List:</label>
-        {{bootstrap-datepicker value=model.dateonwaitinglist class="form-control" id="waitInput"}}
+        <label for="dateOnWaitingListInput">Date on Wait List:</label>
+        {{bootstrap-datepicker value=model.dateOnWaitingList class="form-control"}}
       </div>
       <div class="form-group">
         <label for="statusInput">Status:</label>
-        <select id="statusInput" class="form-control">
-          <option value="1" selected="selected">Ongoing</option>
-          <option value="2">Waiting List</option>
-          <option value="3">Finished</option>
-          <option value="4">On Hold</option>
-        </select>
+        {{#x-select value=model.status }}
+          {{#x-option value=1}}Ongoing{{/x-option}}
+          {{#x-option value=2}}Waiting List{{/x-option}}
+          {{#x-option value=3}}Finished{{/x-option}}
+          {{#x-option value=4}}On Hold{{/x-option}}
+        {{/x-select}}
       </div>
       <div class="form-group">
         <label for="creditInput">Credit:</label>
