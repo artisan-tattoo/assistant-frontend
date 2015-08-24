@@ -35,7 +35,7 @@ export default Base.extend({
     }, function(xhr) { 
       var response = JSON.parse(xhr.responseText); 
       Ember.run(function() { 
-        reject(response.error); 
+        reject(response.errors[0].detail);
       }); 
     }); 
   }); 
