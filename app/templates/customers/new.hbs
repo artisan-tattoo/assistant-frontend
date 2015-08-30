@@ -5,6 +5,11 @@
       <div class="form-group">
         <label for="nameInput">Name:</label>
         {{input value=model.name class="form-control" id="nameInput"}}
+        {{#each model.errors.name as |error|}}
+          <div class="alert alert-danger">
+            {{error.message}}
+          </div>
+        {{/each}}
       </div>
       <div class="form-group">
         <label for="emailInput">Email:</label>
@@ -14,6 +19,11 @@
         <label for="phoneInput" describedby="phoneHelp">Phone Number:</label>
         <span id="phoneHelp" class="help-block">e.g. 888-888-8888</span>
         {{input value=model.phone class="form-control" id="phoneInput"}}
+        {{#each model.errors.phone as |error|}}
+          <div class="alert alert-danger">
+            {{error.message}}
+          </div>
+        {{/each}}
       </div>
       <div class="form-group clearfix">
         <div class="pull-left">
@@ -52,5 +62,10 @@
       </div>
       <button class="btn btn-primary" {{action 'createCustomer'}}>Create</button>
     </form>
+    {{#if model.errors }}
+      <div class="alert alert-danger">
+        <strong>There was an error.</strong>
+      </div>
+    {{/if}}
   </div>
 </div>
