@@ -29,6 +29,7 @@ export default DS.Model.extend({
 
   formattedDateOnWaitingList: Ember.computed('dateOnWaitingList', function() {
     var date = this.get('dateOnWaitingList');
+    if(!date) { return "Not currently on list"; }
     return (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
   })
 });
