@@ -24,3 +24,7 @@ th a:after {
 .search {
   margin: 50px 0;
 }
+
+.navbar {
+  border-radius: 0;
+}
