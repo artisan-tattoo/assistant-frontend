@@ -10,7 +10,10 @@ export default Ember.ArrayController.extend({
     var customers = this.get('arrangedContent');
 
     return customers.filter(function(customer) {
-      return customer.get('name').match(rx);
+      return    customer.get('name').match(rx) ||
+                customer.get('location').match(rx) ||
+                customer.get('want').match(rx) ||
+                customer.get('notes').match(rx);
     });
 
   }),
