@@ -21,3 +21,6 @@ th a:after {
   content: " \25BE";
 }
 
+.search {
+  margin: 50px 0;
+}
