@@ -14,7 +14,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active">{{#link-to 'customers'}}Customers<span class="sr-only">(current)</span>{{/link-to}}</li>
+        {{#link-to 'customers' tagName='li'}} 
+          {{#link-to 'customers'}}Customers{{/link-to}}
+        {{/link-to}}
+        {{#link-to 'waiting-list' tagName='li'}} 
+          {{#link-to 'waiting-list'}}Waiting List{{/link-to}}
+        {{/link-to}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>

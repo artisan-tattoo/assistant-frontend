@@ -14,6 +14,7 @@ Router.map(function() {
   });
   this.route('login');
   this.route('index', { path: '/' });
+  this.route('waiting-list');
 });
 
 export default Router;
