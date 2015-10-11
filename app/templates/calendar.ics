@@ -1,0 +1,5 @@
+<ul>
+  {{#each model as |appointment|}}
+    <li>{{apointment}}</li>
+  {{/end}}
+</ul>

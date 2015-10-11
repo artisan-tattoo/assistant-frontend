@@ -20,6 +20,7 @@
           <td>{{customer.phone}}</td>
           <td>
             {{#link-to 'customer' customer tagName="button" class="btn btn-success"}}Show{{/link-to}}
+            {{#link-to 'appointments.new' tagName="button" class="btn btn-primary"}}Schedule{{/link-to}} 
           </td>
         </tr>
       {{/each}}
