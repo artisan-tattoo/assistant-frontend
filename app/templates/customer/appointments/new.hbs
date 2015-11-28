@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>New Appointment</h2>
+    <p>An appointment for {{ name }} with Jason</p>
+    <form action="/appointments" method="post">
+      <div class="form-group">
+        <label for="dateScheduled">Date:</label>
+        {{bootstrap-datepicker value=model.dateScheduled class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="descriptionInput">Notes:</label>
+        {{textarea value=model.description class="form-control" rows="3" id="descriptionInput"}}
+      </div>
+      <button class="btn btn-primary" {{action '#'}}>Create</button>
+    </form>
+    {{#if model.errors }}
+      <div class="alert alert-danger">
+        <strong>There was an error.</strong>
+      </div>
+    {{/if}}
+  </div>
+</div>
