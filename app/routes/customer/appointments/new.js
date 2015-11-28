@@ -7,7 +7,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   },
   model: function() {
     return Ember.RSVP.hash({
-      appointment: {
+      appointment: function(){
         var customer = this.modelFor("customer");
         var appointment = this.store.createRecord('appointment');
 
