@@ -14,6 +14,8 @@ export default DS.Model.extend({
   want: DS.attr('string'),
   notes: DS.attr('string'),
 
+  appointments: DS.hasMany('appointment', { async: true }),
+
   statusText: Ember.computed('status', function() {
     switch (this.get('status')) {
       case 1:
