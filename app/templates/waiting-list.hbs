@@ -8,6 +8,8 @@
         <th>Status</th>
         <th>Date on Waiting List</th>
         <th>Phone</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -19,7 +21,10 @@
           <td>{{customer.formattedDateOnWaitingList}}</td>
           <td>{{customer.phone}}</td>
           <td>
-            {{#link-to 'customer' customer tagName="button" class="btn btn-success"}}Show{{/link-to}}
+            {{#link-to 'customer' customer tagName="button" class="btn"}}Details{{/link-to}}
+          </td>
+          <td>
+            {{#link-to 'customer.appointments.new' customer tagName="button" class="btn btn-success"}}Make Appointment{{/link-to}}
           </td>
         </tr>
       {{/each}}
